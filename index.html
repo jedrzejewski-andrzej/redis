@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redis</title>
+  </head>
+  <body>
+    <h1>Dodaj uczelnię</h1>
+    <form name="university">
+      <label for="name">Nazwa uczelni:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="type">Typ uczelni:</label>
+      <input type="text" id="type" name="type" required><br>
+      <label for="city">Miasto:</label>
+      <input type="text" id="city" name="city" required><br>
+      <button type="button" onClick="putData(
+        document.forms['university']['name'].value,
+        document.forms['university']['type'].value,
+        document.forms['university']['city'].value
+        )">Dodaj</button>
+    </form>
+
+    <script>
+      const form = document.getElementById('form');
+
+      function putData(name, type, city) {
+        json = {};
+        json.name = name;
+        json.type = type;
+        json.city = city;
+        fetch('http://localhost:8080/university', {
+          method: 'PUT',
+          headers: { 'Content-Type' : 'application/json', 'Accept': 'application/json'},
+          body: JSON.stringify(json),
+        })
+        .then(response => console.log);
+      }
+    </script>
+  </body>
+</html>
