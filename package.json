@@ -1,0 +1,19 @@
+{
+  "name": "redisbasic",
+  "version": "1.0.0",
+  "description": "Zadanie z Redisa",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "25648",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^18.16.3",
+    "async-redis": "^2.0.0",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "redis": "^4.6.6"
+  }
+}
