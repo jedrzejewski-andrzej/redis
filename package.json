@@ -1,19 +1,19 @@
 {
-  "name": "redis",
+  "name": "redisbasic",
   "version": "1.0.0",
-  "description": "Redis task",
-  "type": "module",
+  "description": "Zadanie z Redisa",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
   },
   "author": "25648",
-  "license": "MIT",
-  "private": true,
+  "license": "ISC",
+  "type": "module",
   "dependencies": {
+    "@types/node": "^18.16.3",
+    "async-redis": "^2.0.0",
     "express": "^4.18.2",
-    "redis-om": "^0.3.6"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "redis": "^4.6.6"
   }
 }
